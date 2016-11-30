@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>The Pet People</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Main page">
+    <meta name="author" content="Michelle Schmiedlin">
+    <link rel="stylesheet" href="mainContent.css"> </head>
+
+<body>
+    <div class="top-bar">
+        <a class="nav-brand"><img id="brand-image" alt="The Pet People Logo" img src="petpaw.png" /></a>
+        <div id="top-nav"> <a href="#about">About Us</a> <a href="#caregiver">Be a Caregiver</a> <a href="#services">Services</a> <a href="#contact us">Contact Us</a> <a href="#checkOut">Check Out</a> </div>
+    </div>
+    <div class="hero"><img src="cuteDogCat.jpg" alt="Dog and Cat Picture"> </div>
+    <div class="pageContent" id="about">
+        <p>
+            <center></center>
+        </p>
+    </div>
+    <div class="pageContent" id="caregiver">
+        <p>
+            <center></center>
+        </p>
+    </div>
+    <div class="pageContent" id="services">
+        <p>
+            <center></center>
+        </p>
+    </div>
+    <div class="pageContent" id="contactUs">
+        <p>
+            <center></center>
+        </p>
+    </div>
+    <div class="pageContent" id="checkOut">
+        <div id="topText">
+            <h2 id="welcome"> Welcome to the Pet People service order form</h2>
+            <h3 id="service"> Please select the service(s) you will like to recieve</h3> </div>
+        <form action="http://localhost/checkout.php" method="post">
+            <fieldset style="background:lightblue; top: 100px; position: relative; width: 750px; margin: 0px auto;">
+                <h2>Pet Service Order Form</h2>
+                <table>
+                    <tr>
+                        <td>Buyer's Name</td>
+                        <td>
+                            <input type="text" name="name" size="25" /> </td>
+                    </tr>
+                    <tr>
+                        <td>Street Address</td>
+                        <td>
+                            <input type="text" name="street" size="25" /> </td>
+                    </tr>
+                    <td>City, State, Zip:</td>
+                    <td>
+                        <input type="text" name="city" size="25" /> </td>
+                </table>
+                <br />
+                <table>
+                    <tr>
+                        <th>Service</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </tr>
+                    <tr>
+                        <td>Dog Walker</td>
+                        <td>25.00/day</td>
+                        <td>
+                            <input type="text" name="dogWalker" size="4" /> </td>
+                    </tr>
+                    <tr>
+                        <td>Dog Sitter</td>
+                        <td>50.00/day</td>
+                        <td>
+                            <input type="text" name="dogSitter" size="4" /> </td>
+                    </tr>
+                    <tr>
+                        <td>Cat Care</td>
+                        <td>20.00/day</td>
+                        <td>
+                            <input type="text" name="catCare" size="4" /> </td>
+                    </tr>
+                    <tr>
+                        <td>Multi Animal Walker</td>
+                        <td>35.00/day</td>
+                        <td>
+                            <input type="text" name="multiAnimalWalker" size="4" /> </td>
+                    </tr>
+                    <tr>
+                        <td>Multi Animal Sitter</td>
+                        <td>60.00/day</td>
+                        <td>
+                            <input type="text" name="multiAnimalSitter" size="4" /> </td>
+                    </tr>
+                </table>
+                <h3>Please complete your transaction with PayPal</h3>
+                <div id="payment">
+                    <input type="image" id="payPal" src="payPal.jpg" alt="Check out with PayPal" />
+                    <div id="resetArea">
+                        <input type="reset" id="reset" value="Clear Order Form" /> </div>
+                </div>
+                <br />
+                <p>* 8% tax will be added to the total order</p>
+                <br /> </fieldset>
+        </form>
+    </div>
+    <section class="footer"> <a href="#about">About us</a> <a href="#caregiver">Be a Caregiver</a> <a href="#services">Services</a> <a href="#contact us">Contact Us</a> <a href="#checkOut">Check Out</a> </section>
+</body>
+
+</html>
