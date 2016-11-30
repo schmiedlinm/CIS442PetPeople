@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Light</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="html login">
+    <meta name="author" content="Michelle Schmiedlin">
+    <style type="text/css">
+        td,
+        th,
+        table {
+            border: thin solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <?php
+    $dogWalker = $_POST["dogWalker"]; 
+    $dogSitter = $_POST["dogSitter"]; 
+    $catCare =$_POST["catCare"];
+    $multiAnimalWalker =$_POST["multiAnimalWalker"];
+    $multiAnimalSitter =$_POST["multiAnimalSitter"];
+    $name =$_POST["name"]; 
+    $street =$_POST["street"]; 
+    $city =$_POST["city"];
+    $payment =$_POST["payment"];
+
+    if ($dogWalker == " ") $dogWalker = 0;
+    if ($dogSitter == " ") $dogSitter = 0;
+    if ($catCare == " ") $catCare = 0;
+    if ($multiAnimalWalker == " ") $multiAnimalWalker = 0;
+     if ($multiAnimalSitter == " ") $multiAnimalSitter = 0;
+    
+    
+    $dogWalker_cost = 25.00 * $dogWalker;
+    $dogSitter_cost = 50.00 * $dogSitter;
+    $catCare_cost = 20.00 $catCare;
+    $multiAnimalWalker_cost = 35.00 * $multiAnimalWalker;
+    $multiAnimalSitter_cost = 60.00 * $multiAnimalSitter;
+    
+    $total_cost = ($dogWalker_cost + $dogSitter_cost + $catCare_cost + $multiAnimalWalker_cost + $multiAnimalSitter_cost) * 1.08;
+    $total_items = $dogWalker + $dogSitter + $catCare + $multiAnimalWalker + multiAnimalSitter;
+    ?>
+        <h3>Customer</h3>
+        <?php 
+        <print ("$name <br /> $street <br /> $city <br />");
+    ?>
+            <br />
+            <table>
+                <caption>Light Bulb Order Information</caption>
+                <tr>
+                    <th>Product</th>
+                    <th>Services Price</th>
+                    <th>Services Purchased</th>
+                </tr>
+                <tr>
+                    <td>Dog Walker</td>
+                    <td>25.00</td>
+                    <td>
+                        <?php print ("$dogWalker"); ?>
+                    </td>
+                    <td>
+                        <?php printf ("$ %.2f", $dogWalker_cost); ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dog Sitter</td>
+                    <td>50.00</td>
+                    <td>
+                        <?php print ("$dogSitter"); ?>
+                    </td>
+                    <td>
+                        <?php printf ("$ %.2f", $dogSitter_cost); ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Cat Care</td>
+                    <td>20.00</td>
+                    <td>
+                        <?php print ("$catCare"); ?>
+                    </td>
+                    <td>
+                        <?php printf ("$ %.2f",  $catCare_cost); ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Multi Animal Walker</td>
+                    <td>35.00</td>
+                    <td>
+                        <?php print ("$multiAnimalWalker"); ?>
+                    </td>
+                    <td>
+                        <?php printf ("$ %.2f", $multiAnimalWalker_cost); ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Multi Animal Sitter</td>
+                    <td>60.00</td>
+                    <td>
+                        <?php print ("$multiAnimalSitter"); ?>
+                    </td>
+                    <td>
+                        <?php printf ("$ %.2f", $multiAnimalSitter_cost); ?>
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <?php
+    print "The number of services you orded $total_items<br />";
+    printf ("Your total bill is: $ %.2f <br />", $total_cost);
+   /* print "Your form of payment is: $payment <br />"; */
+    ?>
+</body>
+
+</html>
